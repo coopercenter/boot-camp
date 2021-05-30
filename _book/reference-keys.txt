@@ -1,0 +1,10 @@
+fig:nice-fig
+tab:nice-tab
+course-coverage
+intro
+literature
+methods
+applications
+example-one
+example-two
+final-words
