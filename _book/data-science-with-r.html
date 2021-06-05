@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Introduction | Data Science Boot Camp</title>
+  <title>Chapter 4 Data Science with R | Data Science Boot Camp</title>
   <meta name="description" content="Course materials for the Data Science Boot Camp, Weldon Cooper Center for Public Service, University of Virginia June 8-10, 2021" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Introduction | Data Science Boot Camp" />
+  <meta property="og:title" content="Chapter 4 Data Science with R | Data Science Boot Camp" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Introduction | Data Science Boot Camp" />
+  <meta name="twitter:title" content="Chapter 4 Data Science with R | Data Science Boot Camp" />
   
   <meta name="twitter:description" content="Course materials for the Data Science Boot Camp, Weldon Cooper Center for Public Service, University of Virginia June 8-10, 2021" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="computing-setup.html"/>
-<link rel="next" href="materials-from-basecamp.html"/>
+<link rel="prev" href="materials-from-basecamp.html"/>
+<link rel="next" href="data-pipelines.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -236,67 +236,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="intro" class="section level1" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Introduction</h1>
-<ul>
-<li>What is data science? Translation of raw data into insight, actionable intelligence.
-<ul>
-<li>Can usefully divide the work into stages of <em>data</em>, <em>analytics</em>, and <em>communications</em>.
-<ul>
-<li><em>Data</em>: acquiring, organizing, managing, curating data (= symbols representing some measurements about the world); reformating and staging data to make it ready for analysis.
-<ul>
-<li>In practice, these activities absorb ~ 80% of the time of a working data scientist. (Your best friend is a good data manager!)</li>
-<li>Hence the value of <em>data standards</em>: the more consistency in the way <em>meaning</em> is represented in data, the less time, tedium, and expense spent on data mapping and transformations.</li>
-</ul></li>
-<li><em>Analytics</em>: statistics, machine learning, modeling, other techniques for extracting summary intelligence from data.
-<ul>
-<li>In general, data science practitioners don’t work on developing new techniques, nor on writing code to efficiently implement techniques. Those are specializations. Most of the work involves identifying the appropriate techniques, and the right software to implement those techniques, given the data and the goals. In some cases, work will be done in close collaboration with domain area specialists, e.g., climate scientists.</li>
-</ul></li>
-<li><em>Communications</em>: creating visualizations, narratives, etc., to reveal complexity, to convey insights. Also includes the creation of reports, dashboards, other <em>data products</em>.</li>
-</ul></li>
-</ul></li>
-<li>Doing data science requires a mix of skills: computing; statistics and other analytics; visual design and communications.</li>
-</ul>
-<div id="reproducible-workflows" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Reproducible workflows</h2>
-<p>Essential for us that workflows be <em>reproducible</em>, auditable, transparent.</p>
-<div id="the-concept-of-reproducibility" class="section level3" number="2.1.1">
-<h3><span class="header-section-number">2.1.1</span> The concept of reproducibility</h3>
-<p>Idea: when you present your results, you present <em>all</em> of the data and the code that another practitioner (of reasonable skill) would need to reproduce your work.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
-<p>We are very much a “reproducible workflow” shop. In ideal practice this means:</p>
-<ul>
-<li><p>If you generate a report or other data product, you should be able to reproduce it entirely by re-running your code. If you were to delete your report, you should be able to regenerate it exactly, simply by re-running your code. This process should require no manual inputs from you, no cutting-and-pasting.</p></li>
-<li><p>If you provide someone else with your code and your data, they should be able to reproduce your report by running your code on their machine. This should be true even if they are using a different type of machine, with a different operating system and directory structure. They should not need to edit your code, make manual inputs, or perform any cut-and-paste operations.</p></li>
-</ul>
-</div>
-<div id="how-we-create-reproducibility-in-practice" class="section level3" number="2.1.2">
-<h3><span class="header-section-number">2.1.2</span> How we create reproducibility in practice</h3>
-<p>These conditions are ideals. In practice, we want to get as close as we can, within reason. Many of the tools that we use, and work processes we adopt, are designed to make our workflows hew closely to this ideal of full reproducibility.</p>
-<p>R Markdown is designed specifically to enable the generation of reports and other products reproducibly.</p>
-<p>Git and Github enable frequent backup of code and other files, and collaboration between colleagues without losing version control.</p>
-<p>Cloud servers for maintaining files and databases help assure that our work is available to each other, properly backed up and curated, and organized in a structured way to facilitate reuse, without loss of version control.</p>
-<p>We seek to avoid as much as possible exchanges of the form, “I don’t know why my code won’t work on your machine. It runs just fine on mine!”</p>
-<p>In particular: except possibly in the course of single work session, you should never have work-related data or code that exists only on your own machine. Ever. Your work, including data and code, should always be backed up to resources that are accessible by other team members.</p>
-</div>
-</div>
-<div id="working-collaboratively-in-a-team" class="section level2" number="2.2">
-<h2><span class="header-section-number">2.2</span> Working collaboratively in a team</h2>
-<p>When working on a personal project, such as a student assignment, it is not necessary to assure that others can access, learn from, critique, reproduce, and build on your work. In a team setting, it is mandatory. We have adopted tools, processes, workflows to try to assure that your own work can be used by others and vice versa.</p>
-</div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="3">
-<li id="fn3"><p>We distinguish <em>reproducibility</em> versus <em>replicability</em>. Your work is <em>reproducible</em> if someone else can regenerate exactly your same results, using your data and your code. Your research results are <em>replicable</em> if another researcher can get essentially the same results when applying your techniques to different but comparable data.<a href="intro.html#fnref3" class="footnote-back">↩︎</a></p></li>
-</ol>
+<div id="data-science-with-r" class="section level1" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Data Science with R</h1>
+<p>Main reference: <a href="https://r4ds.had.co.nz/">R for Data Science</a> by Hadley Wickham and Garrett Grolemund.</p>
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="computing-setup.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="materials-from-basecamp.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="materials-from-basecamp.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-pipelines.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
