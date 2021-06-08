@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Data pipelines | Data Science Boot Camp</title>
+  <title>Chapter 5 Data wrangling | Data Science Boot Camp</title>
   <meta name="description" content="Course materials for the Data Science Boot Camp, Weldon Cooper Center for Public Service, University of Virginia June 8-10, 2021" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Data pipelines | Data Science Boot Camp" />
+  <meta property="og:title" content="Chapter 5 Data wrangling | Data Science Boot Camp" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Data pipelines | Data Science Boot Camp" />
+  <meta name="twitter:title" content="Chapter 5 Data wrangling | Data Science Boot Camp" />
   
   <meta name="twitter:description" content="Course materials for the Data Science Boot Camp, Weldon Cooper Center for Public Service, University of Virginia June 8-10, 2021" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="team.html"/>
-<link rel="next" href="data-wrangling-1.html"/>
+<link rel="prev" href="data-pipelines.html"/>
+<link rel="next" href="git-and-github-1.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -252,66 +252,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-pipelines" class="section level1" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Data pipelines</h1>
-<div id="retrieving-data" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> Retrieving data</h2>
-<div id="from-local-files" class="section level3" number="4.1.1">
-<h3><span class="header-section-number">4.1.1</span> From local files</h3>
+<div id="data-wrangling-1" class="section level1" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Data wrangling</h1>
+<p>To learn how to wrangle and visualize data using the Tidyverse packages, you may find it useful to go through the <a href="https://learn.datacamp.com/skill-tracks/tidyverse-fundamentals">Tidyverse Fundamentals with R</a> modules on <a href="https://learn.datacamp.com/">Datacamp</a>.</p>
+<p>Datacamp also offers <a href="https://learn.datacamp.com/career-tracks/data-scientist-with-r">a range of other learning modules for developing data science skills in R</a>.</p>
+<div id="tidy-data-1" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Tidy data</h2>
 </div>
-<div id="from-apis" class="section level3" number="4.1.2">
-<h3><span class="header-section-number">4.1.2</span> From APIs</h3>
+<div id="dplyr-1" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Dplyr</h2>
 </div>
-<div id="from-databases" class="section level3" number="4.1.3">
-<h3><span class="header-section-number">4.1.3</span> From databases</h3>
-<p>Instructions for database access</p>
-<ol style="list-style-type: decimal">
-<li>Install DBeaver (unless you already have desktop database client software you prefer): Here is a link to download for both Windows and Mac OS X. We will be using the community edition 7.0.0. for accessing PostgreSQL databases.</li>
-</ol>
-<p>The Community Edition is free. Note that DBeaver uses and requires Java. If you install it via the Windows or MacOS installer then you don’t need to install Java separately.</p>
-<ol start="2" style="list-style-type: decimal">
-<li>Download and install Cisco Mobility VPN client: See instructions here.</li>
-</ol>
-<p>After launch, select the “UVA Anywhere” network.</p>
-<p>You need to use the VPN if and only if you are access the database from off-Grounds. When you are on-Grounds, skip this step.</p>
-<ol start="3" style="list-style-type: decimal">
-<li><p>Log into Postgres DB:</p>
-<p>Host: va-energy2.postgres.database.azure.com
-Username: [your UVA id]<span class="citation">(<span class="citeproc-not-found" data-reference-id="va-energy2"><strong>???</strong></span>)</span>
-Password: [Contact Chloe Fauvel Chloe to get your individual password]
-Port: 5432
-Initial database: postgres</p></li>
-</ol>
-<p>Please don’t share your individual credentials.</p>
-</div>
-<div id="from-web-resources" class="section level3" number="4.1.4">
-<h3><span class="header-section-number">4.1.4</span> From web resources</h3>
-</div>
-</div>
-<div id="data-types" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Data types</h2>
-<div id="data-types-in-r" class="section level3" number="4.2.1">
-<h3><span class="header-section-number">4.2.1</span> Data types in R</h3>
-</div>
-<div id="conversion-on-read-in" class="section level3" number="4.2.2">
-<h3><span class="header-section-number">4.2.2</span> Conversion on read-in</h3>
-</div>
-</div>
-<div id="data-wrangling" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Data wrangling</h2>
-<p>To learn how to wrangle and visualize data using the Tidyverse packages, you may find it useful to go through the <a href="https://learn.datacamp.com/skill-tracks/tidyverse-fundamentals">Tidyverse Fundamentals with R</a> modules on <a href="https://learn.datacamp.com/">Datacamp</a>.
-- Datacamp also offers <a href="https://learn.datacamp.com/career-tracks/data-scientist-with-r">a range of other learning modules for developing data science skills in R</a>.</p>
-<div id="tidy-data" class="section level3" number="4.3.1">
-<h3><span class="header-section-number">4.3.1</span> Tidy data</h3>
-</div>
-<div id="dplyr" class="section level3" number="4.3.2">
-<h3><span class="header-section-number">4.3.2</span> Dplyr</h3>
-</div>
-</div>
-<div id="managing-data" class="section level2" number="4.4">
-<h2><span class="header-section-number">4.4</span> Managing data</h2>
-<div id="dos-and-donts" class="section level3" number="4.4.1">
-<h3><span class="header-section-number">4.4.1</span> DOs and DON’Ts</h3>
+<div id="managing-data-1" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Managing data</h2>
+<div id="dos-and-donts-1" class="section level3" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> DOs and DON’Ts</h3>
 
 </div>
 </div>
@@ -321,8 +275,8 @@ Initial database: postgres</p></li>
           </div>
         </div>
       </div>
-<a href="team.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="data-wrangling-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="data-pipelines.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="git-and-github-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

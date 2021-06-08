@@ -1,0 +1,5 @@
+# Bibliographic resources
+
+## Zotero 
+
+## Bibtex
